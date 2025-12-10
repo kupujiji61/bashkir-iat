@@ -139,12 +139,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			remindError : true,
 
 			remindErrorText : '<p align="center" style="font-size:1em; font-family:arial; color:#000000">' +
-			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Press the other key to continue.<p/>',
+			'Если вы ошибетесь, на экране появится <font color="#ff0000"><b>X</b></font> красного цвета. ' +
+			'Нажмите другую кнопку для продолжения.<p/>',
 
 			remindErrorTextTouch : '<p align="center" style="font-size:1.4em; font-family:arial; color:#000000">' +
-			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Touch the other side to continue.<p/>',
+			'Если вы ошибетесь, на экране появится <font color="#ff0000"><b>X</b></font> красного цвета. ' +
+			'Нажмите другую кнопку для продолжения.<p/>',
 
 			errorCorrection : true, //Should participants correct error responses?
 			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
@@ -155,17 +155,17 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			leftKey : 'e', 
 			rightKey: 'i',
 			//Text and style for key instructions displayed about the category labels.
-			leftKeyText : 'Press "E" for', 
-			rightKeyText : 'Press "I" for', 
+			leftKeyText : 'Нажмите "E" для', 
+			rightKeyText : 'Нажмите "I" для', 
 			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
 			//Text and style for the separator between the top and bottom category labels.
-			orText : 'or', 
+			orText : 'или', 
 			orCss : {'font-size':'1.8em', color:'#000000'},
 			
 			instWidth : 99, //The width of the instructions stimulus
 			
-			finalText : 'Press space to continue to the next task', 
-			finalTouchText : 'Touch the bottom green area to continue to the next task',
+			finalText : 'Нажмите пробел для перехода к следующему заданию', 
+			finalTouchText : 'Нажмите зеленую часть снизу для перехода к следующему заданию',
 
 			touchMaxStimulusWidth : '50%', 
 			touchMaxStimulusHeight : '50%', 
@@ -177,41 +177,41 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			// leftCategory, rightCategory, leftAttribute and rightAttribute, blockNum, nBlocks.
 			// Notice that this is HTML text.
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Часть blockNum из nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
-				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Поставьте левый палец на клавишу <b>E</b> для слов / картинок, которые принадлежат к категории <font color="#0000ff">leftAttribute.</font>' +
+				'<br/>Поставьте правый палец на клавишу <b>I</b> для слов / картинок, которые принадлежат к категории <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'Если вы ошибетесь, на экране появится <font color="#ff0000"><b>X</b></font> красного цвета. ' +
+				'Нажмите другую кнопку для продолжения.<br/>' +
+				'<u>Отвечайте как можно быстрее,</u> соблюдая правильность ответов.<br/><br/></p>'+
+				'<p align="center">Нажмите <b>пробел</b>, как будете готовы начать.</font></p></div>',
 			instAttributePracticeTouch: [
 				'<div>',
 					'<p align="center">',
-						'<u>Part blockNum of nBlocks</u>',
+						'<u>Часть blockNum из nBlocks</u>',
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Put a left finger over the the <b>left</b> green area for items that belong to the category <font color="#0000ff">leftAttribute</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/>',
-						'Items will appear one at a time.<br/>',
+						'Поставьте левый палец на <b>левую</b> зеленую часть для слов / картинок, которые принадлежат к категории<font color="#0000ff">leftAttribute</font>.<br/>',
+						'Поставьте правый палец на <b>right</b> зеленую часть для слов / картинок, которые принадлежат к категории <font color="#0000ff">rightAttribute</font>.<br/>',
+						'Слова / картинки будут появляться по одной за раз.<br/>',
 						'<br/>',
-						'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.',
+						'Если вы ошибетесь, на экране появится <font color="#ff0000"><b>X</b></font> красного цвета. Нажмите на другую часть экрана. <u>Отвечайте как можно быстрее</u>, соблюдая правильность ответов.',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Нажмите на <b>Нижнюю </b> зеленую часть, как будете готовы начать.</p>',
 				'</div>'
 			].join('\n'),
 
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
-				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
+				'<font color="#000000"><u>Часть blockNum из nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#336600">leftCategory</font>. ' +
-				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#336600">rightCategory</font>.<br/>' +
-				'Items will appear one at a time.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Поставьте левый палец на клавишу <b>E</b> для слов / картинок, которые принадлежат к категории <font color="#336600">leftCategory</font>. ' +
+				'<br/>Поставьте правый палец на клавишу <b>I</b>  для слов / картинок, которые принадлежат к категории <font color="#336600">rightCategory</font>.<br/>' +
+				'Слова / картинки будут появляться по одной за раз.<br/><br/>' +
+				'Если вы ошибетесь, на экране появится <font color="#ff0000"><b>X</b></font> красного цвета. ' +
+				'Нажмите другую кнопку для продолжения.<br/>' +
+				'<u>Отвечайте как можно быстрее,</u> соблюдая правильность ответов.<br/><br/></p>'+
+				'<p align="center">Нажмите <b>пробел</b>, как будете готовы начать.</font></p></div>',
 			instCategoriesPracticeTouch: [
 				'<div>',
 					'<p align="center">',
